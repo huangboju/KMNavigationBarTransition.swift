@@ -27,16 +27,16 @@ extension UINavigationController {
                 swizzledSelector: #selector(km_push(_:animated:)))
 
             KMSwizzleMethod(self,
-                originalSelector: #selector(popViewController(animated:)),
-                swizzledSelector: #selector(km_popViewController(animated:)))
+                originalSelector: #selector(popViewController),
+                swizzledSelector: #selector(km_popViewController))
 
             KMSwizzleMethod(self,
-                originalSelector: #selector(popToViewController(_:animated:)),
+                originalSelector: #selector(popToViewController),
                 swizzledSelector: #selector(km_pop(to:animated:)))
 
             KMSwizzleMethod(self,
-                originalSelector: #selector(popToRootViewController(animated:)),
-                swizzledSelector: #selector(km_popToRootViewController(_:)))
+                originalSelector: #selector(popToRootViewController),
+                swizzledSelector: #selector(km_popToRootViewController))
 
             KMSwizzleMethod(self,
                 originalSelector: #selector(setViewControllers(_:animated:)),
@@ -99,9 +99,9 @@ extension UINavigationController {
         return km_pop(to: viewController, animated: animated)
     }
 
-    func km_popToRootViewController(_ animated: Bool) -> [UIViewController] {
+    func km_popToRootViewController(animated: Bool) -> [UIViewController] {
         if viewControllers.count < 2 {
-            return km_popToRootViewController(animated)
+            return km_popToRootViewController(animated: animated)
         }
         let disappearingViewController = viewControllers.last
         disappearingViewController?.km_addTransitionNavigationBarIfNeeded()
@@ -112,7 +112,7 @@ extension UINavigationController {
         if animated {
             disappearingViewController?.km_prefersNavigationBarBackgroundViewHidden = true
         }
-        return km_popToRootViewController(animated)
+        return km_popToRootViewController(animated: animated)
     }
 
     func km_set(_ controllers: [UIViewController], animated: Bool) {
