@@ -55,7 +55,7 @@ extension UIViewController {
             }
             fromVC?.view.clipsToBounds = false
             fromVC?.view.clipsToBounds = false
-            if km_transitionNavigationBar != nil {
+            if km_transitionNavigationBar == nil {
                 km_addTransitionNavigationBarIfNeeded()
 
                 km_prefersNavigationBarBackgroundViewHidden = true
