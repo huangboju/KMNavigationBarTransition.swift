@@ -13,11 +13,10 @@ func KMSwizzleMethod(_ cls: AnyClass, originalSelector: Selector, swizzledSelect
     let originalMethod = class_getInstanceMethod(cls, originalSelector)
     let swizzledMethod = class_getInstanceMethod(cls, swizzledSelector)
 
-    let didAddMethod =
-        class_addMethod(cls,
-        originalSelector,
-        method_getImplementation(swizzledMethod),
-        method_getTypeEncoding(swizzledMethod))
+    let didAddMethod = class_addMethod(cls,
+                                       originalSelector,
+                                       method_getImplementation(swizzledMethod),
+                                       method_getTypeEncoding(swizzledMethod))
 
     if didAddMethod {
         class_replaceMethod(cls,

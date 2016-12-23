@@ -26,12 +26,12 @@ extension UIViewController {
                             swizzledSelector: #selector(km_viewWillLayoutSubviews))
 
             KMSwizzleMethod(self,
-                            originalSelector: #selector(viewDidAppear(_:)),
-                            swizzledSelector: #selector(km_viewDidAppear(animated:)))
+                            originalSelector: #selector(viewDidAppear),
+                            swizzledSelector: #selector(km_viewDidAppear))
         }
     }
 
-    func km_viewDidAppear(animated: Bool) {
+    func km_viewDidAppear(_ animated: Bool) {
         if let bar = km_transitionNavigationBar {
             navigationController?.navigationBar.setBar(using: bar)
 
@@ -44,7 +44,7 @@ extension UIViewController {
             }
         }
         km_prefersNavigationBarBackgroundViewHidden = false
-        km_viewDidAppear(animated: animated)
+        km_viewDidAppear(animated)
     }
 
     func km_viewWillLayoutSubviews() {
@@ -59,7 +59,7 @@ extension UIViewController {
                 tc?.containerView.backgroundColor = navigationController?.km_containerViewBackgroundColor
             }
             fromVC?.view.clipsToBounds = false
-            fromVC?.view.clipsToBounds = false
+            toVC?.view.clipsToBounds = false
             if km_transitionNavigationBar == nil {
                 km_addTransitionNavigationBarIfNeeded()
 
@@ -135,5 +135,3 @@ extension UIViewController {
         }
     }
 }
-
-

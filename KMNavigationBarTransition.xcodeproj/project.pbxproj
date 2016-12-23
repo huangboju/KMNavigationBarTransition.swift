@@ -93,12 +93,12 @@
 		D8C558821E0CBAD500882D86 /* KMNavigationBarTransition */ = {
 			isa = PBXGroup;
 			children = (
+				D8C558A31E0CBB3100882D86 /* Classes */,
 				D8C558AD1E0CF19400882D86 /* MainViewController.swift */,
 				D8C558AE1E0CF19400882D86 /* NavigationBarData.swift */,
 				D8C558AF1E0CF19400882D86 /* NavigationController.swift */,
 				D8C558B01E0CF19400882D86 /* SettingsViewController.swift */,
 				D8C558B11E0CF19400882D86 /* UIImage+Color.swift */,
-				D8C558A31E0CBB3100882D86 /* Classes */,
 				D8C558831E0CBAD500882D86 /* AppDelegate.swift */,
 				D8C558871E0CBAD500882D86 /* Main.storyboard */,
 				D8C5588A1E0CBAD500882D86 /* Assets.xcassets */,
