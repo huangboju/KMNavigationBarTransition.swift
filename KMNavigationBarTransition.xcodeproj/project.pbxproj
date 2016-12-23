@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D8C558841E0CBAD500882D86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C558831E0CBAD500882D86 /* AppDelegate.swift */; };
-		D8C558861E0CBAD500882D86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C558851E0CBAD500882D86 /* ViewController.swift */; };
 		D8C558891E0CBAD500882D86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C558871E0CBAD500882D86 /* Main.storyboard */; };
 		D8C5588B1E0CBAD500882D86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C5588A1E0CBAD500882D86 /* Assets.xcassets */; };
 		D8C5588E1E0CBAD500882D86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C5588C1E0CBAD500882D86 /* LaunchScreen.storyboard */; };
@@ -37,7 +36,6 @@
 /* Begin PBXFileReference section */
 		D8C558801E0CBAD500882D86 /* KMNavigationBarTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KMNavigationBarTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C558831E0CBAD500882D86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D8C558851E0CBAD500882D86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D8C558881E0CBAD500882D86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D8C5588A1E0CBAD500882D86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8C5588D1E0CBAD500882D86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 				D8C558B11E0CF19400882D86 /* UIImage+Color.swift */,
 				D8C558A31E0CBB3100882D86 /* Classes */,
 				D8C558831E0CBAD500882D86 /* AppDelegate.swift */,
-				D8C558851E0CBAD500882D86 /* ViewController.swift */,
 				D8C558871E0CBAD500882D86 /* Main.storyboard */,
 				D8C5588A1E0CBAD500882D86 /* Assets.xcassets */,
 				D8C5588C1E0CBAD500882D86 /* LaunchScreen.storyboard */,
@@ -255,7 +252,6 @@
 				D8C558B31E0CF19400882D86 /* NavigationBarData.swift in Sources */,
 				D8C558A81E0CBD6600882D86 /* KMWeakObjectContainer.swift in Sources */,
 				D8C558B51E0CF19400882D86 /* SettingsViewController.swift in Sources */,
-				D8C558861E0CBAD500882D86 /* ViewController.swift in Sources */,
 				D8C558B41E0CF19400882D86 /* NavigationController.swift in Sources */,
 				D8C558841E0CBAD500882D86 /* AppDelegate.swift in Sources */,
 				D8C558B61E0CF19400882D86 /* UIImage+Color.swift in Sources */,

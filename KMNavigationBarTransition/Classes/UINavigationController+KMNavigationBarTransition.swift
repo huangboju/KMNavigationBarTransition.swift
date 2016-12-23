@@ -49,17 +49,16 @@ extension UINavigationController {
     }
 
     func km_push(_ viewController: UIViewController, animated: Bool) {
-        let disappearingViewController = viewControllers.last
-        if disappearingViewController == nil {
+        guard let disappearingViewController = viewControllers.last else {
             return km_push(viewController, animated: animated)
         }
-        if km_transitionContextToViewController == nil || disappearingViewController?.km_transitionNavigationBar == nil {
-            disappearingViewController?.km_addTransitionNavigationBarIfNeeded()
+        if km_transitionContextToViewController == nil || disappearingViewController.km_transitionNavigationBar == nil {
+            disappearingViewController.km_addTransitionNavigationBarIfNeeded()
         }
         if animated {
             km_transitionContextToViewController = viewController
-            if disappearingViewController?.km_transitionNavigationBar != nil {
-                disappearingViewController?.km_prefersNavigationBarBackgroundViewHidden = true
+            if disappearingViewController.km_transitionNavigationBar != nil {
+                disappearingViewController.km_prefersNavigationBarBackgroundViewHidden = true
             }
         }
         return km_push(viewController, animated: animated)
@@ -116,17 +115,18 @@ extension UINavigationController {
         return km_popToRootViewController(animated)
     }
 
-    func km_set(_ viewControllers: [UIViewController], animated: Bool) {
-        if let disappearingViewController = viewControllers.last {
-            let controller = viewControllers.last
-            if animated && (disappearingViewController == controller) {
-                disappearingViewController.km_addTransitionNavigationBarIfNeeded()
-                if disappearingViewController.km_transitionNavigationBar != nil {
-                    disappearingViewController.km_prefersNavigationBarBackgroundViewHidden = true
+    func km_set(_ controllers: [UIViewController], animated: Bool) {
+        if animated {
+            if let disappearingViewController = self.viewControllers.last, let controller = controllers.last {
+                if disappearingViewController != controller {
+                    disappearingViewController.km_addTransitionNavigationBarIfNeeded()
+                    if disappearingViewController.km_transitionNavigationBar != nil {
+                        disappearingViewController.km_prefersNavigationBarBackgroundViewHidden = true
+                    }
                 }
             }
         }
-        return km_set(viewControllers, animated: animated)
+        return km_set(controllers, animated: animated)
     }
 
     var km_transitionContextToViewController: UIViewController? {

@@ -131,7 +131,7 @@
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wYA-l5-kST">
                                                     <rect key="frame" x="309" y="6" width="51" height="31"/>
                                                     <connections>
-                                                        <action selector="nextNavigationBarPrefersHidden:" destination="Bes-lB-DPe" eventType="valueChanged" id="KnB-kK-7kf"/>
+                                                        <action selector="nextNavigationBarPrefersShadowImageHiddenWithSender:" destination="Bes-lB-DPe" eventType="valueChanged" id="wP4-W1-3gD"/>
                                                     </connections>
                                                 </switch>
                                             </subviews>
@@ -160,7 +160,7 @@
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6mV-rc-90m">
                                                     <rect key="frame" x="309" y="6" width="51" height="31"/>
                                                     <connections>
-                                                        <action selector="nextNavigationBarPrefersShadowImageHidden:" destination="Bes-lB-DPe" eventType="valueChanged" id="ziw-6s-L0d"/>
+                                                        <action selector="nextNavigationBarPrefersHiddenWithSender:" destination="Bes-lB-DPe" eventType="valueChanged" id="w6p-mV-WJg"/>
                                                     </connections>
                                                 </switch>
                                             </subviews>
@@ -193,7 +193,7 @@
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gdb-F0-AmE">
                                                     <rect key="frame" x="309" y="6" width="51" height="31"/>
                                                     <connections>
-                                                        <action selector="navigationBarTranslucent:" destination="Bes-lB-DPe" eventType="valueChanged" id="wBk-aF-msl"/>
+                                                        <action selector="navigationBarTranslucentWithSender:" destination="Bes-lB-DPe" eventType="valueChanged" id="kSc-Zf-3BV"/>
                                                     </connections>
                                                 </switch>
                                             </subviews>

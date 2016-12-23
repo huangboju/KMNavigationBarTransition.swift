@@ -21,9 +21,13 @@ extension UIViewController {
 
         DispatchQueue.once(token: onceToken) {
 
-            KMSwizzleMethod(self, originalSelector: #selector(viewWillLayoutSubviews), swizzledSelector: #selector(km_viewWillLayoutSubviews))
+            KMSwizzleMethod(self,
+                            originalSelector: #selector(viewWillLayoutSubviews),
+                            swizzledSelector: #selector(km_viewWillLayoutSubviews))
 
-            KMSwizzleMethod(self, originalSelector: #selector(viewDidAppear(_:)), swizzledSelector: #selector(km_viewDidAppear(animated:)))
+            KMSwizzleMethod(self,
+                            originalSelector: #selector(viewDidAppear(_:)),
+                            swizzledSelector: #selector(km_viewDidAppear(animated:)))
         }
     }
 
@@ -50,6 +54,7 @@ extension UIViewController {
 
         if self == navigationController?.viewControllers.last && toVC == self {
             let isTranslucent = navigationController?.navigationBar.isTranslucent ?? false
+
             if isTranslucent {
                 tc?.containerView.backgroundColor = navigationController?.km_containerViewBackgroundColor
             }
@@ -88,7 +93,7 @@ extension UIViewController {
         km_transitionNavigationBar?.removeFromSuperview()
         km_transitionNavigationBar = bar
         km_resizeTransitionNavigationBarFrame()
-        if navigationController?.isNavigationBarHidden == false && navigationController?.navigationBar.isHidden == false {
+        if navigationController?.isNavigationBarHidden == false && !navigationBar.isHidden {
             view.addSubview(km_transitionNavigationBar!)
         }
     }
@@ -130,3 +135,5 @@ extension UIViewController {
         }
     }
 }
+
+
