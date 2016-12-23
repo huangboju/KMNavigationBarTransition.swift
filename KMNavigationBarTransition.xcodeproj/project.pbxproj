@@ -13,6 +13,15 @@
 		D8C5588B1E0CBAD500882D86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C5588A1E0CBAD500882D86 /* Assets.xcassets */; };
 		D8C5588E1E0CBAD500882D86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C5588C1E0CBAD500882D86 /* LaunchScreen.storyboard */; };
 		D8C558991E0CBAD600882D86 /* KMNavigationBarTransitionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C558981E0CBAD600882D86 /* KMNavigationBarTransitionUITests.swift */; };
+		D8C558A51E0CBB7000882D86 /* KMSwizzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C558A41E0CBB7000882D86 /* KMSwizzle.swift */; };
+		D8C558A81E0CBD6600882D86 /* KMWeakObjectContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C558A71E0CBD6600882D86 /* KMWeakObjectContainer.swift */; };
+		D8C558AA1E0CC12D00882D86 /* UINavigationController+KMNavigationBarTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C558A91E0CC12D00882D86 /* UINavigationController+KMNavigationBarTransition.swift */; };
+		D8C558AC1E0CCA5100882D86 /* UIViewController+KMNavigationBarTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C558AB1E0CCA5100882D86 /* UIViewController+KMNavigationBarTransition.swift */; };
+		D8C558B21E0CF19400882D86 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C558AD1E0CF19400882D86 /* MainViewController.swift */; };
+		D8C558B31E0CF19400882D86 /* NavigationBarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C558AE1E0CF19400882D86 /* NavigationBarData.swift */; };
+		D8C558B41E0CF19400882D86 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C558AF1E0CF19400882D86 /* NavigationController.swift */; };
+		D8C558B51E0CF19400882D86 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C558B01E0CF19400882D86 /* SettingsViewController.swift */; };
+		D8C558B61E0CF19400882D86 /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C558B11E0CF19400882D86 /* UIImage+Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +45,15 @@
 		D8C558941E0CBAD600882D86 /* KMNavigationBarTransitionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KMNavigationBarTransitionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C558981E0CBAD600882D86 /* KMNavigationBarTransitionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMNavigationBarTransitionUITests.swift; sourceTree = "<group>"; };
 		D8C5589A1E0CBAD600882D86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8C558A41E0CBB7000882D86 /* KMSwizzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMSwizzle.swift; sourceTree = "<group>"; };
+		D8C558A71E0CBD6600882D86 /* KMWeakObjectContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMWeakObjectContainer.swift; sourceTree = "<group>"; };
+		D8C558A91E0CC12D00882D86 /* UINavigationController+KMNavigationBarTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+KMNavigationBarTransition.swift"; sourceTree = "<group>"; };
+		D8C558AB1E0CCA5100882D86 /* UIViewController+KMNavigationBarTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+KMNavigationBarTransition.swift"; sourceTree = "<group>"; };
+		D8C558AD1E0CF19400882D86 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D8C558AE1E0CF19400882D86 /* NavigationBarData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarData.swift; sourceTree = "<group>"; };
+		D8C558AF1E0CF19400882D86 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		D8C558B01E0CF19400882D86 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D8C558B11E0CF19400882D86 /* UIImage+Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Color.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +95,12 @@
 		D8C558821E0CBAD500882D86 /* KMNavigationBarTransition */ = {
 			isa = PBXGroup;
 			children = (
+				D8C558AD1E0CF19400882D86 /* MainViewController.swift */,
+				D8C558AE1E0CF19400882D86 /* NavigationBarData.swift */,
+				D8C558AF1E0CF19400882D86 /* NavigationController.swift */,
+				D8C558B01E0CF19400882D86 /* SettingsViewController.swift */,
+				D8C558B11E0CF19400882D86 /* UIImage+Color.swift */,
+				D8C558A31E0CBB3100882D86 /* Classes */,
 				D8C558831E0CBAD500882D86 /* AppDelegate.swift */,
 				D8C558851E0CBAD500882D86 /* ViewController.swift */,
 				D8C558871E0CBAD500882D86 /* Main.storyboard */,
@@ -96,6 +120,17 @@
 			path = KMNavigationBarTransitionUITests;
 			sourceTree = "<group>";
 		};
+		D8C558A31E0CBB3100882D86 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D8C558A41E0CBB7000882D86 /* KMSwizzle.swift */,
+				D8C558A71E0CBD6600882D86 /* KMWeakObjectContainer.swift */,
+				D8C558A91E0CC12D00882D86 /* UINavigationController+KMNavigationBarTransition.swift */,
+				D8C558AB1E0CCA5100882D86 /* UIViewController+KMNavigationBarTransition.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,6 +141,7 @@
 				D8C5587C1E0CBAD500882D86 /* Sources */,
 				D8C5587D1E0CBAD500882D86 /* Frameworks */,
 				D8C5587E1E0CBAD500882D86 /* Resources */,
+				D8C558A61E0CBC1600882D86 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -194,13 +230,38 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D8C558A61E0CBC1600882D86 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D8C5587C1E0CBAD500882D86 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8C558B21E0CF19400882D86 /* MainViewController.swift in Sources */,
+				D8C558B31E0CF19400882D86 /* NavigationBarData.swift in Sources */,
+				D8C558A81E0CBD6600882D86 /* KMWeakObjectContainer.swift in Sources */,
+				D8C558B51E0CF19400882D86 /* SettingsViewController.swift in Sources */,
 				D8C558861E0CBAD500882D86 /* ViewController.swift in Sources */,
+				D8C558B41E0CF19400882D86 /* NavigationController.swift in Sources */,
 				D8C558841E0CBAD500882D86 /* AppDelegate.swift in Sources */,
+				D8C558B61E0CF19400882D86 /* UIImage+Color.swift in Sources */,
+				D8C558AC1E0CCA5100882D86 /* UIViewController+KMNavigationBarTransition.swift in Sources */,
+				D8C558AA1E0CC12D00882D86 /* UINavigationController+KMNavigationBarTransition.swift in Sources */,
+				D8C558A51E0CBB7000882D86 /* KMSwizzle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
