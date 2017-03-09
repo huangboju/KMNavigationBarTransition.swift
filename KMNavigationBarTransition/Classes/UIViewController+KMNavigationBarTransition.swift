@@ -99,20 +99,19 @@ extension UIViewController {
     }
 
     func km_adjustScrollViewContentOffsetIfNeeded() {
-        if let scrollView = view as? UIScrollView {
-            let topContentOffsetY = -scrollView.contentInset.top
-            let bottomContentOffsetY = scrollView.contentSize.height - (scrollView.bounds.height - scrollView.contentInset.bottom)
+        guard let scrollView = view as? UIScrollView else { return }
+        let topContentOffsetY = -scrollView.contentInset.top
+        let bottomContentOffsetY = scrollView.contentSize.height - (scrollView.bounds.height - scrollView.contentInset.bottom)
 
-            var adjustedContentOffset = scrollView.contentOffset
-            if adjustedContentOffset.y > bottomContentOffsetY {
-                adjustedContentOffset.y = bottomContentOffsetY
-            }
-            if adjustedContentOffset.y < topContentOffsetY {
-                adjustedContentOffset.y = topContentOffsetY
-            }
-
-            scrollView.setContentOffset(adjustedContentOffset, animated: false)
+        var adjustedContentOffset = scrollView.contentOffset
+        if adjustedContentOffset.y > bottomContentOffsetY {
+            adjustedContentOffset.y = bottomContentOffsetY
         }
+        if adjustedContentOffset.y < topContentOffsetY {
+            adjustedContentOffset.y = topContentOffsetY
+        }
+
+        scrollView.setContentOffset(adjustedContentOffset, animated: false)
     }
 
     var km_transitionNavigationBar: UINavigationBar? {

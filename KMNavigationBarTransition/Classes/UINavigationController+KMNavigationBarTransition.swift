@@ -23,8 +23,8 @@ extension UINavigationController {
 
         DispatchQueue.once(token: _onceToken) {
             KMSwizzleMethod(self,
-                originalSelector: #selector(pushViewController(_:animated:)),
-                swizzledSelector: #selector(km_push(_:animated:)))
+                originalSelector: #selector(pushViewController),
+                swizzledSelector: #selector(km_pushViewController))
 
             KMSwizzleMethod(self,
                 originalSelector: #selector(popViewController),
@@ -32,15 +32,15 @@ extension UINavigationController {
 
             KMSwizzleMethod(self,
                 originalSelector: #selector(popToViewController),
-                swizzledSelector: #selector(km_pop(to:animated:)))
+                swizzledSelector: #selector(km_popToViewController))
 
             KMSwizzleMethod(self,
                 originalSelector: #selector(popToRootViewController),
                 swizzledSelector: #selector(km_popToRootViewController))
 
             KMSwizzleMethod(self,
-                originalSelector: #selector(setViewControllers(_:animated:)),
-                swizzledSelector: #selector(km_set(_:animated:)))
+                originalSelector: #selector(setViewControllers),
+                swizzledSelector: #selector(km_setViewControllers))
         }
     }
 
@@ -48,9 +48,9 @@ extension UINavigationController {
         return UIColor.white
     }
 
-    func km_push(_ viewController: UIViewController, animated: Bool) {
+    func km_pushViewController(_ viewController: UIViewController, animated: Bool) {
         guard let disappearingViewController = viewControllers.last else {
-            return km_push(viewController, animated: animated)
+            return km_pushViewController(viewController, animated: animated)
         }
         if km_transitionContextToViewController == nil || disappearingViewController.km_transitionNavigationBar == nil {
             disappearingViewController.km_addTransitionNavigationBarIfNeeded()
@@ -61,7 +61,7 @@ extension UINavigationController {
                 disappearingViewController.km_prefersNavigationBarBackgroundViewHidden = true
             }
         }
-        return km_push(viewController, animated: animated)
+        return km_pushViewController(viewController, animated: animated)
     }
 
     func km_popViewController(animated: Bool) -> UIViewController {
@@ -82,10 +82,10 @@ extension UINavigationController {
         return km_popViewController(animated: animated)
     }
 
-    func km_pop(to viewController: UIViewController, animated: Bool) -> [UIViewController] {
+    func km_popToViewController(_ viewController: UIViewController, animated: Bool) -> [UIViewController] {
 
         if !viewControllers.contains(viewController) || viewControllers.count < 2 {
-            return km_pop(to: viewController, animated: animated)
+            return km_popToViewController(viewController, animated: animated)
         }
         let disappearingViewController = viewControllers.last
         disappearingViewController?.km_addTransitionNavigationBarIfNeeded()
@@ -96,7 +96,7 @@ extension UINavigationController {
         if animated {
             disappearingViewController?.km_prefersNavigationBarBackgroundViewHidden = true
         }
-        return km_pop(to: viewController, animated: animated)
+        return km_popToViewController(viewController, animated: animated)
     }
 
     func km_popToRootViewController(animated: Bool) -> [UIViewController] {
@@ -115,9 +115,9 @@ extension UINavigationController {
         return km_popToRootViewController(animated: animated)
     }
 
-    func km_set(_ controllers: [UIViewController], animated: Bool) {
+    func km_setViewControllers(_ viewControllers: [UIViewController], animated: Bool) {
         if animated {
-            if let disappearingViewController = self.viewControllers.last, let controller = controllers.last {
+            if let disappearingViewController = self.viewControllers.last, let controller = viewControllers.last {
                 if disappearingViewController != controller {
                     disappearingViewController.km_addTransitionNavigationBarIfNeeded()
                     if disappearingViewController.km_transitionNavigationBar != nil {
@@ -126,7 +126,7 @@ extension UINavigationController {
                 }
             }
         }
-        return km_set(controllers, animated: animated)
+        return km_setViewControllers(viewControllers, animated: animated)
     }
 
     var km_transitionContextToViewController: UIViewController? {
