@@ -23,24 +23,24 @@ extension UINavigationController {
 
         DispatchQueue.once(token: _onceToken) {
             KMSwizzleMethod(self,
-                originalSelector: #selector(pushViewController),
-                swizzledSelector: #selector(km_pushViewController))
+                            originalSelector: #selector(pushViewController),
+                            swizzledSelector: #selector(km_pushViewController))
 
             KMSwizzleMethod(self,
-                originalSelector: #selector(popViewController),
-                swizzledSelector: #selector(km_popViewController))
+                            originalSelector: #selector(popViewController),
+                            swizzledSelector: #selector(km_popViewController))
 
             KMSwizzleMethod(self,
-                originalSelector: #selector(popToViewController),
-                swizzledSelector: #selector(km_popToViewController))
+                            originalSelector: #selector(popToViewController),
+                            swizzledSelector: #selector(km_popToViewController))
 
             KMSwizzleMethod(self,
-                originalSelector: #selector(popToRootViewController),
-                swizzledSelector: #selector(km_popToRootViewController))
+                            originalSelector: #selector(popToRootViewController),
+                            swizzledSelector: #selector(km_popToRootViewController))
 
             KMSwizzleMethod(self,
-                originalSelector: #selector(setViewControllers),
-                swizzledSelector: #selector(km_setViewControllers))
+                            originalSelector: #selector(setViewControllers),
+                            swizzledSelector: #selector(km_setViewControllers))
         }
     }
 

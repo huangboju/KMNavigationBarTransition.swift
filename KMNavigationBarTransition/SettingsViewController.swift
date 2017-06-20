@@ -36,7 +36,7 @@ class SettingsViewController: UITableViewController {
 
 extension SettingsViewController {
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
         return colorsData.colorsArray.count
     }
 

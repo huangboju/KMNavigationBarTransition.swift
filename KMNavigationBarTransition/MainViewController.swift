@@ -48,6 +48,11 @@ class MainViewController: UITableViewController {
         navigationController?.navigationBar.shadowImage = (currentNavigationBarData.prefersShadowImageHidden) ? UIImage() : nil
 
         title = "Title " + "\(navigationController!.viewControllers.count)"
+
+//        navigationController?.navigationBar.setBackgroundImage(UIImage(), for:  .default)
+//
+//        // 6、设置导航栏阴影图片
+//        navigationController?.navigationBar.shadowImage = UIImage()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -75,18 +80,18 @@ extension MainViewController {
 
 // MARK: - Table view data source
 
-extension  MainViewController {
+extension MainViewController {
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSections(in _: UITableView) -> Int {
         return navigationController?.viewControllers.first == self ? 2 : 1
     }
 }
 
 // MARK: - Table view delegate
 
-extension  MainViewController {
+extension MainViewController {
 
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         switch (indexPath.section, indexPath.row) {
         case (0, 0), (0, 1):
@@ -101,7 +106,7 @@ extension  MainViewController {
 
 extension MainViewController {
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
         if let identifier = segue.identifier {
             switch identifier {
             case Constants.Segue.SetStyleIdentifier:
