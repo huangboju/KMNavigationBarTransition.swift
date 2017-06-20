@@ -52,7 +52,7 @@ extension UIViewController {
         let fromVC = tc?.viewController(forKey: .from)
         let toVC = tc?.viewController(forKey: .to)
 
-        if self == navigationController?.viewControllers.last && toVC == self {
+        if self == navigationController?.viewControllers.last && toVC == self && navigationController?.km_transitionContextToViewController != nil {
             let isTranslucent = navigationController?.navigationBar.isTranslucent ?? false
 
             if isTranslucent {

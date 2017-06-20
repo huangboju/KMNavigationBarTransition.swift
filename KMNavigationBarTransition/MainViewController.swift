@@ -48,11 +48,6 @@ class MainViewController: UITableViewController {
         navigationController?.navigationBar.shadowImage = (currentNavigationBarData.prefersShadowImageHidden) ? UIImage() : nil
 
         title = "Title " + "\(navigationController!.viewControllers.count)"
-
-//        navigationController?.navigationBar.setBackgroundImage(UIImage(), for:  .default)
-//
-//        // 6、设置导航栏阴影图片
-//        navigationController?.navigationBar.shadowImage = UIImage()
     }
 
     override func viewWillAppear(_ animated: Bool) {
